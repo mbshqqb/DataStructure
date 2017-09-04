@@ -1,5 +1,7 @@
 package tree;
 
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args){
         System.out.println("ab".substring(1,1));
@@ -11,5 +13,7 @@ public class Main {
 //        System.out.println("ab".substring(3,3));
 //        System.out.println("ab".substring(2,3));
         System.out.println("ab".indexOf('c'));
+        HashMap hashMap=new HashMap();
+        hashMap.put(key,value);
     }
 }

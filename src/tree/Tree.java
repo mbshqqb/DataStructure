@@ -5,7 +5,7 @@ import java.util.*;
 public class Tree {
     public static void main(String args[]) {
         Node root=buildTree("HBDFAEKCG","ABHFDECKG");
-        levelOrder(root);
+        inOrder(root);
     }
     private static void preOrder(Node root){
         Node parent=root;
@@ -23,7 +23,22 @@ public class Tree {
         }
     }
     private static void inOrder(Node root){
-
+        Stack<Node>stack=new Stack<>();
+        stack.push(null);
+        Node parent=root;
+        while(true){
+            while(parent!=null){
+                stack.push(parent);
+                parent=parent.left;
+            }
+            parent=stack.pop();
+            if(parent!=null){
+                System.out.println(parent.data);
+                parent=parent.right;
+            }else{
+                break;
+            }
+        }
     }
     private static void levelOrder(Node root){
         Queue<Node>queue=new LinkedList<>();
